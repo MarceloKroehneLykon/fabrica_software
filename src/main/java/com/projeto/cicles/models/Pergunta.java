@@ -1,6 +1,6 @@
 package com.projeto.cicles.models;
 
-import com.projeto.cicles.enums.TipoPergunta;
+import com.projeto.cicles.enums.Categoria;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -15,9 +15,9 @@ public class Pergunta {
     @GeneratedValue
     private UUID id;
 
-    @Column(name = "tipo_pergunta_id")
+    @Column(name = "categoria_id")
     @Enumerated(EnumType.STRING)
-    private TipoPergunta tipoPergunta;
+    private Categoria categoria;
 
     private String texto;
 

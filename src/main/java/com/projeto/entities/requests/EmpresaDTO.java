@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 import java.util.UUID;
 
 public record EmpresaDTO(
+    boolean ativo,
     String nome,
     String cpfCnpj,
     UUID setorId,

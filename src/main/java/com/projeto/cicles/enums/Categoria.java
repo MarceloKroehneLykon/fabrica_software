@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import com.projeto.bases.exceptions.ValidacoesException;
 import lombok.Getter;
 
-public enum TipoPergunta {
+public enum Categoria {
 
     MULTI(0,"multi");//TODO: adicionar os tipos certos.
 
@@ -13,7 +13,7 @@ public enum TipoPergunta {
     private final int id;
     private final String descricao;
 
-    TipoPergunta(int id, String descricao) {
+    Categoria(int id, String descricao) {
         this.id = id;
         this.descricao = descricao;
     }
@@ -24,19 +24,19 @@ public enum TipoPergunta {
     }
 
     @JsonCreator
-    public static TipoPergunta fromString(String descricao) {
-        for (TipoPergunta tipoPergunta : values()) {
-            if (tipoPergunta.descricao.contentEquals(descricao)) {
-                return tipoPergunta;
+    public static Categoria fromString(String descricao) {
+        for (Categoria categoria : values()) {
+            if (categoria.descricao.contentEquals(descricao)) {
+                return categoria;
             }
         }
         throw new ValidacoesException("Descrição inválida: " + descricao);
     }
 
-    public static TipoPergunta fromId(int id) {
-        for (TipoPergunta tipoPergunta : values()) {
-            if (tipoPergunta.id == id) {
-                return tipoPergunta;
+    public static Categoria fromId(int id) {
+        for (Categoria categoria : values()) {
+            if (categoria.id == id) {
+                return categoria;
             }
         }
         throw new ValidacoesException("ID de tipo de pergunta inválida: " + id);
