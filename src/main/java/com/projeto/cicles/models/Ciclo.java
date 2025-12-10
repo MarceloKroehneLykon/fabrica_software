@@ -19,15 +19,6 @@ public class Ciclo {
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinTable(
-            name = "ciclos_relatorios",
-            joinColumns = @JoinColumn(name = "ciclo_id"),
-            inverseJoinColumns = @JoinColumn(name = "relatorio_id")
-    )
-    private List<Relatorio> relatorios;
-
-
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinTable(
             name = "ciclos_resposta",
             joinColumns = @JoinColumn(name = "ciclo_id"),
             inverseJoinColumns = @JoinColumn(name = "respostas_id")

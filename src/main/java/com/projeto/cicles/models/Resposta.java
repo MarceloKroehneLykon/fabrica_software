@@ -22,4 +22,6 @@ public class Resposta {
     @JoinColumn(name = "pergunta_id")
     private Pergunta pergunta;
 
+    private String conteudo;
+
 }

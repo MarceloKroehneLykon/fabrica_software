@@ -1,10 +1,7 @@
 package com.projeto.cicles.models;
 
 import com.projeto.entities.models.Setor;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.sql.Timestamp;
@@ -17,6 +14,11 @@ public class Relatorio {
     @GeneratedValue
     @Id
     private UUID id;
+    @ManyToOne
+    @JoinColumn(name = "setor_id")
     private Setor setor;
     private Timestamp dataCriacao;
+    @ManyToOne
+    @JoinColumn(name = "ciclo_id")
+    private Ciclo ciclo;
 }

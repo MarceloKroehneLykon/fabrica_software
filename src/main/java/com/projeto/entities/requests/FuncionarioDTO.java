@@ -10,7 +10,8 @@ public record FuncionarioDTO(
     String cpf,
     String senha,
     int permissaoId,
-    UUID setorId
+    UUID setorId,
+    UUID empresaId
 ) {
 
 }
