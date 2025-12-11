@@ -12,6 +12,7 @@ import java.sql.Timestamp;
 public class Empresa extends EntidadeBase {
     private String nome;
     private String cpfCnpj;
+    private String email;
     private Timestamp dataCadastro;
     private Timestamp dataFuncionamentoIncio;
     private Timestamp dataFuncionamentoFim;

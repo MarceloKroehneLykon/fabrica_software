@@ -7,6 +7,7 @@ public record EmpresaDTO(
     boolean ativo,
     String nome,
     String cpfCnpj,
+    String email,
     UUID setorId,
     Timestamp dataCadastro,
     Timestamp dataFuncionamentoIncio,

@@ -12,6 +12,6 @@ import java.util.UUID;
 @Repository
 public interface RelatorioRepository extends JpaRepository<Relatorio, UUID> {
 
-    @Query("SELECT rel FROM Relatorio rel INNER JOIN Setor set ON rel.setor.id = set.id WHERE rel.empresa.id = :empresa_id")
+    @Query("SELECT rel FROM Relatorio rel INNER JOIN Setor set ON rel.setor.id = set.id WHERE set.empresa.id = :empresa_id")
     List<Relatorio> findAllByEmpresaId(@Param("empresa_id") UUID empresaId);
 }
